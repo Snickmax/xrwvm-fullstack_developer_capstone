@@ -14,7 +14,7 @@ python3 manage.py migrate --run-syncdb
 python3 manage.py runserver
 
 ```
-
+---
 # frontend
 
 ```bash
@@ -24,7 +24,7 @@ npm install
 
 npm run build
 ```
-
+---
 # Mongodb 3030
 
 ```bash
@@ -34,7 +34,7 @@ docker build . -t nodeapp
 
 docker-compose up
 ```
-
+---
 # Microservicio sentimientos
 
 ```bash
