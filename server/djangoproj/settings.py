@@ -28,20 +28,12 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", "True") == "True"
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = [
-    'localhost',
-    'https://victor2002es-8000.theiadockernext-1-labs-prod-'
-    'theiak8s-4-tor01.proxy.cognitiveclass.ai'
-]
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://victor2002es-8000.theiadockernext-1-labs-prod-'
-    'theiak8s-4-tor01.proxy.cognitiveclass.ai'
+    o for o in os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",") if o
 ]
 
 REST_FRAMEWORK = {
