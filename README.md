@@ -1,3 +1,15 @@
+# About this implementation
+
+This is my capstone project for the IBM Full Stack Software Developer Professional Certificate,
+built on the course starter template (`xrwvm-fullstack_developer_capstone`). On top of the
+template I implemented: the Django views and REST proxy layer (auth, dealer/review endpoints in
+`djangoapp/views.py` and `restapis.py`), the Car models with admin and population script, the
+Node/Express + MongoDB dealerships and reviews microservice (`server/database`), a Flask/NLTK
+sentiment analyzer deployed to IBM Code Engine (`djangoapp/microservices`), the React frontend
+components (dealers list, dealer details, post review, login/register), Dockerfiles with a
+Kubernetes deployment manifest, and a GitHub Actions lint workflow (flake8 + JSHint).
+
+---
 # server 8000
 
 ```bash
